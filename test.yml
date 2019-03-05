@@ -5,3 +5,4 @@ jenkins_plugins_custom:
   - name: plugin3
   - name: plugin2
     state: absent
+  - version: '1'

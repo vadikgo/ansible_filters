@@ -3,7 +3,7 @@ from ansible import errors
 
 def unionattr(list1, list2, attr):
     try:
-        return [el1 for el1 in list1 if (attr in el1) and (el1[attr] not in [el2[attr] for el2 in list2 if attr in el2])] + list2
+        return [el1 for el1 in list1 if (attr in el1) and (el1[attr] not in [el2[attr] for el2 in list2 if attr in el2])] + [el2 for el2 in list2 if attr in el2]
     except Exception as e:
         raise errors.AnsibleFilterError('unionattr plugin error: %s' % str(e))
 
