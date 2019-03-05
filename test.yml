@@ -1,0 +1,7 @@
+jenkins_plugins:
+  - name: plugin1
+  - name: plugin2
+jenkins_plugins_custom:
+  - name: plugin3
+  - name: plugin2
+    state: absent
